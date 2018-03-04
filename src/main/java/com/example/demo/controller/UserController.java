@@ -21,9 +21,6 @@ public class UserController {
 
     private UserRepository userRepository;
 
-    @Value("${VARNAME}")
-    private String passowrd;
-
     @Autowired
     private Environment env;
 
@@ -34,7 +31,6 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> findALlUsers() {
-        System.out.println(passowrd);
         return userRepository.findAll();
     }
 

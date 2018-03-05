@@ -7,6 +7,7 @@ spring:
     initialize: false
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
 
 ---
 spring:
@@ -16,3 +17,6 @@ spring:
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
     initialize: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true

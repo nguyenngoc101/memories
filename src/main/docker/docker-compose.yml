@@ -8,6 +8,8 @@ services:
       - MYSQL_DATABASE=demo
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=dbp4ss
+    ports:
+      - 3307:3306
   apiserver:
     image: api-server
     depends_on:
